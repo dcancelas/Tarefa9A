@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tarefa9a.MainController">
+   <children>
+      <HBox fx:id="hbox" prefHeight="600.0" prefWidth="734.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="tablaCLientes" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0">
+              <columns>
+                <TableColumn fx:id="dniCL" editable="false" maxWidth="80.0" resizable="false" text="DNI" />
+                <TableColumn fx:id="nomeCL" editable="false" maxWidth="150.0" prefWidth="150.0" resizable="false" text="Nome" />
+                  <TableColumn fx:id="telefonoCL" editable="false" maxWidth="100.0" prefWidth="100.0" resizable="false" text="Teléfono" />
+                  <TableColumn fx:id="direccionCl" editable="false" maxWidth="200.0" prefWidth="200.0" resizable="false" text="Dirección" />
+                  <TableColumn fx:id="debedaCL" editable="false" maxWidth="80.0" resizable="false" text="Débeda" />
+              </columns>
+            </TableView>
+            <VBox fx:id="vbox" alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="223.0">
+               <children>
+                  <Button fx:id="novoCliente" layoutX="42.0" layoutY="420.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Añadir cliente">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="buscarCliente" layoutX="37.0" layoutY="470.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Buscar cliente">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="borrarCliente" layoutX="37.0" layoutY="550.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Borrar cliente">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="borrarFicheiro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Borrar ficheiro">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
