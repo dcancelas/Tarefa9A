@@ -19,25 +19,29 @@
             </TableView>
             <VBox fx:id="vbox" alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="223.0">
                <children>
-                  <Button fx:id="novoCliente" layoutX="42.0" layoutY="420.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Añadir cliente">
+                  <Button fx:id="bNovoCliente" layoutX="42.0" layoutY="420.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#novoCliente" prefHeight="40.0" prefWidth="125.0" text="Añadir cliente">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin></Button>
-                  <Button fx:id="buscarCliente" layoutX="37.0" layoutY="470.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Buscar cliente">
+                  <Button fx:id="bBuscarCliente" layoutX="37.0" layoutY="470.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buscarCliente" prefHeight="40.0" prefWidth="125.0" text="Buscar cliente">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="borrarCliente" layoutX="37.0" layoutY="550.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Borrar cliente">
+                  <Button fx:id="bBorrarCliente" layoutX="37.0" layoutY="550.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Borrar cliente">
                      <VBox.margin>
                         <Insets bottom="40.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="borrarFicheiro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Borrar ficheiro">
+                  <Button fx:id="bBorrarFicheiro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Borrar ficheiro">
                      <VBox.margin>
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </Button>
+                  <Label text="Autor: dcancelas">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin></Label>
                </children>
             </VBox>
          </children>
