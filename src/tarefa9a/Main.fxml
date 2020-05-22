@@ -28,12 +28,12 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="bBorrarCliente" layoutX="37.0" layoutY="550.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Borrar cliente">
+                  <Button fx:id="bBorrarCliente" layoutX="37.0" layoutY="550.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#borrarCliente" prefHeight="40.0" prefWidth="125.0" text="Borrar cliente">
                      <VBox.margin>
                         <Insets bottom="40.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="bBorrarFicheiro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="Borrar ficheiro">
+                  <Button fx:id="bBorrarFicheiro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#borrarFicheiro" prefHeight="40.0" prefWidth="125.0" text="Borrar ficheiro">
                      <VBox.margin>
                         <Insets bottom="20.0" />
                      </VBox.margin>

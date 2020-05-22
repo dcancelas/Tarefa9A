@@ -6,10 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
+
 /**
  * @author dcancelas
  */
 public class Main extends Application {
+
+    static String nomeFicheiro = "clientes.dat";
+    static File ficheiro = new File(nomeFicheiro);
 
     @Override
     public void start(Stage primaryStage) throws Exception{

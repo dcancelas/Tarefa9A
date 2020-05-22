@@ -12,9 +12,11 @@ public class NovoCliente {
     public TextField telfField;
     public TextField direcField;
     public TextField debedaField;
+    LecturaEscritura lecturaEscritura = new LecturaEscritura();
 
     public void novoCliente(ActionEvent event) {
-        MainController.listaClientes.add(new Cliente(dniField.getText(), nomeField.getText(), telfField.getText(), direcField.getText(), Float.parseFloat(debedaField.getText())));
+        //MainController.listaClientes.add(new Cliente(dniField.getText(), nomeField.getText(), telfField.getText(), direcField.getText(), Float.parseFloat(debedaField.getText())));
+        lecturaEscritura.novoCliente(new Cliente(dniField.getText(), nomeField.getText(), telfField.getText(), direcField.getText(), Float.parseFloat(debedaField.getText())));
         MainController.stageNovoCliente.close();
     }
 }

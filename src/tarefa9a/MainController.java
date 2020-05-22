@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,6 +30,7 @@ public class MainController implements Initializable {
     public TableColumn<Cliente, Float> debedaCL;
     static ObservableList<Cliente> listaClientes = FXCollections.observableArrayList();
     static Stage stageNovoCliente = new Stage();
+    LecturaEscritura lecturaEscritura = new LecturaEscritura();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -39,6 +41,7 @@ public class MainController implements Initializable {
         direccionCl.setCellValueFactory(new PropertyValueFactory<>("direccion"));
         debedaCL.setCellValueFactory(new PropertyValueFactory<>("debeda"));
         debedaCL.setStyle("-fx-alignment: CENTER-RIGHT;");
+        lecturaEscritura.lerFicheiro(listaClientes);
 
         //Clientes de proba
         /*for (int i = 0; i < 30; i++) {
@@ -71,5 +74,21 @@ public class MainController implements Initializable {
         }
         if (!atopado && dni != null)
             JOptionPane.showMessageDialog(null, "ERROR: Non se atopou un cliente co DNI introducido", "Tarefa9A", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public void borrarCliente(ActionEvent event) {
+        if (tablaCLientes.getSelectionModel().isEmpty())
+            JOptionPane.showMessageDialog(null, "Debe seleccionar un cliente para poder borralo", "Tarefa9A", JOptionPane.INFORMATION_MESSAGE);
+        else {
+            int confirm = JOptionPane.showConfirmDialog(null, "Está seguro de querer borrar o cliente?", "Tarefa9A", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            if (confirm == 0) {
+                listaClientes.remove(tablaCLientes.getSelectionModel().getSelectedItem());
+                lecturaEscritura.escribirFicheiro(listaClientes);
+            }
+        }
+    }
+
+    public void borrarFicheiro(ActionEvent event) {
+        lecturaEscritura.borrarFicheiro();
     }
 }
